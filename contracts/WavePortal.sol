@@ -21,37 +21,36 @@ contract WavePortal {
     }
 
     //store the address of the sender in an array
-    struct Wavers {
-        id address;
-    }
+    // struct Wavers {
+    //     id wavers;
+    // }
 
-    Wavers[] public wavers;
+    // Wavers[] public wavers;
 
-    function addWavers() public view {
-        wavers.push(Wavers(msg.sender));
-    }
-    function getWavers() public view returns (address[]) {
-        return  wavers;
-    }
+    // function addWavers() public view {
+    //     wavers.push(Wavers(msg.sender));
+    // }
+    // function getWavers() public view returns (address[]) {
+    //     return  wavers;
+    // }
 
     //store a map of addresses and wave counts so you keep track of who's waving at you the most
-    mapping(uint256 => address) public WaverToCount;
-    mapping(address => uint256) countsPerWaver;
+    //     mapping(uint256 => address) public WaverToCount;
+    //     mapping(address => uint256) countsPerWaver;
 
-    function getZombiesByOwner(address _owner) external view returns(uint[]) {
-    uint[] memory result = new uint[](WaverToCount[_waver]);
-    uint counter = 0;
-    for (uint i = 0; i < zombies.length; i++) {
-      if (zombieToOwner[i] == _owner) {
-        result[counter] = i;
-        counter++;
-      }
-    }
-    return result;
-  }
+    //     function getZombiesByOwner(address _owner) external view returns(uint[]) {
+    //     uint[] memory result = new uint[](WaverToCount[_waver]);
+    //     uint counter = 0;
+    //     for (uint i = 0; i < zombies.length; i++) {
+    //       if (zombieToOwner[i] == _owner) {
+    //         result[counter] = i;
+    //         counter++;
+    //       }
+    //     }
+    //     return result;
+    //   }
 
+    // function getCountsPerWaver(){
 
-    function getCountsPerWaver(){
-
-    }
+    // }
 }

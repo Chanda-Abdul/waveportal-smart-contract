@@ -1,5 +1,5 @@
 ## Wave Portal
-[BuildSpace.io "Wave Portal" Project](https://app.buildspace.so/projects/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b) to 
+[BuildSpace.so "Wave Portal" Project](https://app.buildspace.so/projects/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b) to 
 - create an Ethereum Smart Contract with Solidity and deploy to the blockchain
 - build Web3 client app to interact with your contract
 
