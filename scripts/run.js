@@ -19,17 +19,37 @@ const main = async () => {
   console.log("Contract deployed to:", waveContract.address);
   console.log("Contract deployed by:", _.address);
 
+  let contractBalance = await hre.ethers.provider.getBalance(
+    waveContract.address
+  );
+  console.log(
+    "Contract balance:",
+    hre.ethers.utils.formatEther(contractBalance)
+  );
+  /*
+   * Let's try two waves now
+   */
+  const waveTxn = await waveContract.wave("This is wave #1");
+  await waveTxn.wait();
+
+  const waveTxn2 = await waveContract.wave("This is wave #2");
+  await waveTxn2.wait();
+
+  /*
+   * Get Contract balance to see what happened!
+   */
+
+  contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
+  console.log(
+    "Contract balance:",
+    hre.ethers.utils.formatEther(contractBalance)
+  );
+
   //First,all the function to grab the # of total waves
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
   console.log(waveCount.toNumber());
 
-  //Then, do the wave
-  let waveTxn = await waveContract.wave("A message!");
-  await waveTxn.wait();
-
-  waveTxn = await waveContract.connect(_).wave("Another message!");
-  await waveTxn.wait();
 
   //Finally, grab the waveCount one more time to see if it changed.
   let allWaves = await waveContract.getTotalWaves();
