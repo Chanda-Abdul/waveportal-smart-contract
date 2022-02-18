@@ -1,4 +1,5 @@
 require('@nomiclabs/hardhat-waffle')
+require('dotenv').config();
 
 task("accounts", "prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -13,8 +14,13 @@ module.exports = {
   solidity: "0.8.4",
   networks: {
     rinkeby: {
-      url: "https://eth-rinkeby.alchemyapi.io/v2/ZyVJH8C-O8xYG57OrbMGGVs2OJmbRqcF",
-      accounts: ["55727e154591d5d8ef49705f653edfaa5d4935a472126f09a8d10ac064048aa0"],
+      url: process.env.STAGING_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    mainnet: {
+      chainId: 1,
+      url: process.env.PROD_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
   paths: {
