@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
@@ -6,33 +6,45 @@ import "hardhat/console.sol";
 contract WavePortal {
     uint256 totalWaves;
 
-    constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
+    event NewWave(address indexed from, uint256 timestamp, string message);
+
+    struct Wave {
+        address waver;
+        string message;
+        uint256 timestamp;
     }
 
-    function wave() public {
+    Wave[] waves;
+
+    constructor() payable {
+        console.log("I AM SMART CONTRACT. POG.");
+    }
+
+    function wave(string memory _message) public {
         totalWaves++;
-        console.log("%s has waved!", msg.sender);
+        console.log("%s has waved with messsge %s", msg.sender, _message);
+        /*
+         * This is where I actually store the wave data in the array.
+         */
+        waves.push(Wave(msg.sender, _message, block.timestamp));
+
+        emit NewWave(msg.sender, block.timestamp, _message);
+    }
+
+    /*
+     * I added a function getAllWaves which will return the struct array, waves, to us.
+     * This will make it easy to retrieve the waves from our website!
+     */
+
+    function getAllWaves() public view returns (Wave[] memory) {
+        return waves;
     }
 
     function getTotalWaves() public view returns (uint256) {
-        console.log("We have %d total waves!", totalWaves);
+        //print contract value
+        console.log("we have %d total waves!", totalWaves);
         return totalWaves;
     }
-
-    //store the address of the sender in an array
-    // struct Wavers {
-    //     id wavers;
-    // }
-
-    // Wavers[] public wavers;
-
-    // function addWavers() public view {
-    //     wavers.push(Wavers(msg.sender));
-    // }
-    // function getWavers() public view returns (address[]) {
-    //     return  wavers;
-    // }
 
     //store a map of addresses and wave counts so you keep track of who's waving at you the most
     //     mapping(uint256 => address) public WaverToCount;
