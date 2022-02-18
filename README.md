@@ -6,6 +6,7 @@
 ## To-Do
 - [ ] Add tests with Mocha
 - [ ] Add `getCountsPerWaver()` to contract
+- [ ] write README.md
 
 ## Basic Sample Hardhat Project
 
