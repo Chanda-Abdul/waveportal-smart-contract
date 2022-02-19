@@ -56,7 +56,7 @@ I built this project so that I could learn some <b>Solidity</b>, write + deploy 
 ## Links
 
 - Link to deployed Site: [Wave Portal Web3 dApp](https://gifted-aryabhata-929956.netlify.app/)
-- Link to Solidity Smart Contract: [Wave Portal Smart Contact Code](https://github.com/Chanda-Abdul/waveportal-client)
+- Link to React Front-end: [React Front-end Code](https://github.com/Chanda-Abdul/waveportal-client)
 
 ## My process
 
@@ -106,14 +106,14 @@ const proudOfThisFunc = () => {
 
 ## Continued development
 
-There are a few things that I would like to revist when I have the time.  The prize functionality is build into the smart contract, but I would like to add some feedback to the UI so that the user willl know that they entered the contest and alert them if they win.  I would also like to add UI feedback for any issues we may encouter, such as running out of gas, etc.
-
+There are a few things that I would like to revist when I have the time.  I would like to add someback end tests with Mocha and or Truffle.  I would also like to add a few more functions to the WavePortal contract.
 
 ### To-Do's
 
 - [ ] Add tests with Mocha
 - [ ] Add `getCountsPerWaver()` to contract
-- [ ] write README.md
+- [x] write README.md
+
 ## Useful resources
 
 -  [Hardhat](https://hardhat.org/), an Ethereum development environment. Hardhat allows you to deploy your contracts, run tests and debug Solidity code without dealing with live environments. This really helped me understand how to build a smart contract from a JavaScript point of view.
