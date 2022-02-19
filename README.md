@@ -19,7 +19,7 @@
 
 This is a solution to the [buildspace](https://buildspace.so/) challenge to build a <b>Web3 App with Solidity + Ethereum Smart Contracts</b>. [buildspace](https://buildspace.so/) is a platform to learn and build <b>Web3</b> projects alongside other devs.
 
-This repo contains the <b>Solidity + Ethereum Smart Contracts</b>for my <b>Web3</b> app.  You can view the repo for front-end <b>React</b> code [here](https://github.com/Chanda-Abdul/waveportal-client).
+This repo contains the <b>Solidity + Ethereum Smart Contracts</b> for my <b>Web3</b> app.  You can view the repo for front-end <b>React</b> code [here](https://github.com/Chanda-Abdul/waveportal-client).
 
 I built this project so that I could learn some <b>Solidity</b>, write + deploy a <b>smart contract</b> to the <b>blockchain</b>, and build a <b>Web3 client</b> app that can <b>interact</b> with your a <b>smart contract</b>, and to basically get comfortable building an entire Web3 App. 
 
@@ -44,14 +44,14 @@ I built this project so that I could learn some <b>Solidity</b>, write + deploy 
 ## Screenshots
 
 ### Landing page and Connect Wallet button
-![](https://github.com/Chanda-Abdul/waveportal-client/screens/landing.png)
+![](https://github.com/Chanda-Abdul/waveportal-client/blob/main/screens/landing.png)
 ### Send message along with your wave
-![](https://github.com/Chanda-Abdul/waveportal-client/screens/sendwave.png)
+![](https://github.com/Chanda-Abdul/waveportal-client/blob/main/screens/sendwave.png)
 ### View loader while wave is being sent
-![](https://github.com/Chanda-Abdul/waveportal-client/screens/mining.png)
+![](https://github.com/Chanda-Abdul/waveportal-client/blob/main/screens/mining.png)
 ### View your wave, number of wavers, and data for each waver
-![](https://github.com/Chanda-Abdul/waveportal-client/screens/wavesent.png)
-![](https://github.com/Chanda-Abdul/waveportal-client/screens/allwaves.png)
+![](https://github.com/Chanda-Abdul/waveportal-client/blob/main/screens/wavesent.png)
+![](https://github.com/Chanda-Abdul/waveportal-client/blob/main/screens/allwaves.png)
 
 ## Links
 
